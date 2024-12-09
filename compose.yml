@@ -1,0 +1,9 @@
+services:
+  rembg:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "80:5100"
+    volumes:
+      - "${U2NET_FILE:-./u2net.onnx}:/home/.u2net/u2net.onnx"
